@@ -26,7 +26,7 @@ webppl.js : webppl-version.txt
 	mv node_modules node_modules_gh_pages
 	git checkout $(WEBPPLVERSION)
 	npm install
-	grunt browserify
+	grunt bundle ../psych201s/practicums/utils
 	mv bundle/webppl.js new-webppl.js
 	git checkout $(ORIGBRANCH)
 	rm -rf node_modules
